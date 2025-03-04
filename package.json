@@ -3,7 +3,9 @@
   "main": "build/index",
   "types": "build/index",
   "version": "0.0.2",
-  "files": ["build"],
+  "files": [
+    "build"
+  ],
   "license": "Apache-2.0",
   "publishConfig": {
     "access": "public"
@@ -24,7 +26,7 @@
   "dependencies": {
     "@credo-ts/askar": "^0.5.13",
     "@credo-ts/core": "^0.5.13",
-    "@hashgraph/did-sdk-js": "github:Meeco/hedera-did-sdk-js#9f5a709ec98e2055de29f990cfe06eb090296b1b",
+    "@hashgraph/did-sdk-js": "https://github.com/Meeco/hedera-did-sdk-js#9f5a709ec98e2055de29f990cfe06eb090296b1b",
     "@hashgraph/sdk": "^2.53.0"
   },
   "devDependencies": {
@@ -40,5 +42,10 @@
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
     "typescript": "~5.3.3"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "@2060.io/ffi-napi@4.0.9": "patches/@2060.io__ffi-napi@4.0.9.patch"
+    }
   }
 }
